@@ -1,0 +1,9 @@
+	/*formtação para mensagem de erro*/
+	label.error {
+		color: #d9534f;
+	}
+
+	/*sformatação para o campo com erro*/
+	input.error {
+		border: 2px solid #d9534f;
+	}

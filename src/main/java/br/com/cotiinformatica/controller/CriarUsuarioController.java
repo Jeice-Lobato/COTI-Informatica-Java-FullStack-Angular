@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.cotiinformatica.entities.Usuario;
+import br.com.cotiinformatica.helpers.EncryptHelper;
 import br.com.cotiinformatica.repositories.UsuarioRepository;
 
 @Controller
@@ -36,14 +37,21 @@ public class CriarUsuarioController {
 			
 			usuario.setNome(request.getParameter("nome"));
 			usuario.setEmail(request.getParameter("email"));
-			usuario.setSenha(request.getParameter("senha"));
+			usuario.setSenha(EncryptHelper.encryptToSHA1(request.getParameter("senha")));
 			
 			//gravar no banco de dados
 			UsuarioRepository usuarioRepository = new UsuarioRepository();
-			usuarioRepository.create(usuario);
+			if(usuarioRepository.find(usuario.getEmail()) == null) {
+				usuarioRepository.create(usuario);
+				
+				//enviando mensagem de sucesso para página
+				modelAndView.addObject("mensagem_sucesso", "Usuário cadastrado com sucesso!");
+				
+			}
+			else {
+				throw new Exception("O email informado já está cadastrado para outro usuário.");
+			}
 			
-			//enviando mensagem de sucesso para página
-			modelAndView.addObject("mensagem_sucesso", "Usuário cadastrado com sucesso!");
 			
 		} catch (Exception e) {
 			//enviando mensagem de erro para página
