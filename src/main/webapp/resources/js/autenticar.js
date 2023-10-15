@@ -8,18 +8,17 @@ $(document).ready(function() {
 				required: true,
 				email: true
 			},
-
-			"senha": {
+			 "senha": {
 				required: true,
 				pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
-
 			}
-
 		},
 		messages: {
 			"senha": {
-				pattern: "A senha deve ter letras maiúsculas, minúsculas, números, símbolos e pelo menos 8 caracteres."
+				pattern: "A senha deve ter letras maiúsculas,minúsculas, números, símbolos e pelomenos 8 caracteres."
+	
 			}
 		}
+
 	});
 });

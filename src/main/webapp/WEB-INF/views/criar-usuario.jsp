@@ -32,15 +32,14 @@
 					</div>
 
 					<div class="text-center text-success">
-						<h3>${mensagem_sucesso}</h3>
+						<h5>${mensagem_sucesso}</h5>
 					</div>
 
 					<div class="text-center text-danger">
-						<h3>${mensagem_erro}</h3>
+						<h5>${mensagem_erro}</h5>
 					</div>
 
-					<form id="formCriarUsuario" method="post"
-						action="criar-usuario-post">
+					<form id="formCriarUsuario" method="post" action="criar-usuario-post">
 
 						<div class="mb-2">
 							<label>Nome do usuário:</label> <input type="text"

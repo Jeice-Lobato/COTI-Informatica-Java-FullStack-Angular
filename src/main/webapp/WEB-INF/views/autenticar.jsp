@@ -30,8 +30,13 @@
 				<p>Entre com as suas credenciais de acesso:</p>
 				</div>
 				
-				<form id="formAutenticar">
+					<div class="text-center text-danger">
+						<h5>${mensagem_erro}</h5>
+					</div>
 				
+				
+				<form id="formAutenticar" method="post" action="autenticar-post">
+						
 				<div class="mb-2">
 					<label>Email de acesso:</label>
 					<input type="text" class="form-control" id="email" name="email" placeholder="Digite seu email aqui."/>

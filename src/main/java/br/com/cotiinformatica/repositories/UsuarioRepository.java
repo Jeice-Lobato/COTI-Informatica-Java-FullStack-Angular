@@ -59,7 +59,6 @@ public class UsuarioRepository {
 			usuario.setIdUsuario(resultSet.getInt("idusuario"));
 			usuario.setNome(resultSet.getString("nome"));
 			usuario.setEmail(resultSet.getString("email"));
-			usuario.setSenha(resultSet.getString("senha"));
 
 		}
 
@@ -69,6 +68,38 @@ public class UsuarioRepository {
 		// retornando o usuário
 		return usuario;
 
+	}
+	
+	//Método para consultar 1 usuário no banco de dados através do email e da senha
+	
+	public Usuario find(String email, String senha) throws Exception {
+		
+		//abrindo conexão com banco de dados
+		Connection connection = ConnectionFactory.getConnection();
+		
+		//escrevendo o comenado SQL executado no banco de dados
+		String 	query = "select * from usuario where email = ? and senha = ?";
+		
+		//executando a query SQL no banco de dados
+		PreparedStatement statement = connection.prepareStatement(query);
+		statement.setString(1, email);
+		statement.setString(2, senha);
+		ResultSet resultSet = statement.executeQuery();
+		
+		//criando um objeto usuario
+		Usuario usuario = null;
+		
+		//verificando se algum registro foi encontrado
+		if(resultSet.next()) {
+			
+			usuario = new Usuario();
+			usuario.setIdUsuario(resultSet.getInt("idusuario"));
+			usuario.setNome(resultSet.getString("nome"));
+			usuario.setEmail(resultSet.getString("email"));
+			
+		}
+		connection.close();//fechando a conexão
+		return usuario;
 	}
 
 }
