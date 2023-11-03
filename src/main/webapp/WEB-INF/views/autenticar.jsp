@@ -1,13 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projeto Contas</title>
 
-<!-- ReferÃªncia da folha de estilos CSS do bootstrap -->
+<!-- Referência da folha de estilos CSS do bootstrap -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -55,7 +55,7 @@
 				
 				<div class="mb-2 d-grid">
 					<a href="/projeto_contas/criar-usuario" class="btn btn-light">
-					NÃ£o possui conta? <strong>Cadastre-se aqui!</strong>
+					Não possui conta? <strong>Cadastre-se aqui!</strong>
 					</a>
 				</div>
 				
@@ -72,7 +72,7 @@
 
 
 
-	<!-- ReferÃªncia do arquivo JS do bootstrap -->
+	<!-- Referência do arquivo JS do bootstrap -->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 		
@@ -90,7 +90,7 @@
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/localization/messages_pt_BR.min.js"></script>
 		
 	<!-- Arquivo JS local -->
-	<script src="resources/js/autenticar.js"></script>
+	<script src="resources/js/autenticar.js" charset="UTF-8"></script>
 
 		
 

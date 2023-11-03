@@ -1,13 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projeto Contas</title>
 
-<!-- Refer√™ncia da folha de estilos CSS do bootstrap -->
+<!-- ReferÍncia da folha de estilos CSS do bootstrap -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -27,7 +27,7 @@
 						<img
 							src="https://www.cotiinformatica.com.br/imagens/logo-coti-informatica.svg" />
 						<hr />
-						<h2>Criar conta de usu√°rio</h2>
+						<h2>Criar conta de usu·rio</h2>
 						<p>Preencha os seus dados para criar uma conta:</p>
 					</div>
 
@@ -42,7 +42,7 @@
 					<form id="formCriarUsuario" method="post" action="criar-usuario-post">
 
 						<div class="mb-2">
-							<label>Nome do usu√°rio:</label> <input type="text"
+							<label>Nome do usu·rio:</label> <input type="text"
 								class="form-control" id="nome" name="nome"
 								placeholder="Digite seu nome aqui." />
 						</div>
@@ -100,7 +100,7 @@
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/localization/messages_pt_BR.min.js"></script>
 
 	<!-- Arquivo JS local -->	
-	<script src="resources/js/criar-usuario.js"></script>
+	<script src="resources/js/criar-usuario.js" charset="UTF-8"></script>
 	
 </body>
 </html>
